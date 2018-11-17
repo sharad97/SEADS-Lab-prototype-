@@ -60,7 +60,7 @@ console.log(date);
         var endTime = unixTime;
    
         var startTime = StartunixTime;
-        var api = '//db.sead.systems:8080/466419818?start_time=';
+        var api = 'http://db.sead.systems:8080/466419818?start_time=';
         var api1 = '&end_time='
         var api2= '&list_format=energy&granularity=3600&device=Panel1&type=P';
         var sum = api + startTime + api1 + endTime + api2;
