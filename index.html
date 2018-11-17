@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SEADS Data Visualization</title>
+           <link rel="image_src" href="rock1.jpg" />
+    </head>
+    <body>
+        
+        <script src="https://d3js.org/d3.v3.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel='stylesheet' type='text/css'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.css" rel='stylesheet' type='text/css'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.css" rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        
+
+
+            <div class="tabtable">
+            <ul class="nav nav-tabs">
+                <li class="active"><a class="atab" href="#a_tab" data-toggle="tab">Panel 1 (HVAC)</a></li>
+                <li><a class="btab" href="#b_tab" data-toggle="tab">Panel 2 (Water Heater)</a></li>
+                <li><a class="ctab" href="#c_tab" data-toggle="tab">Panel 3 (Kitchen)</a></li>
+                <li><a class="dtab" href="#d_tab" data-toggle="tab">Solar</a></li>
+                <li><a class="etab" href="#e_tab" data-toggle="tab">Generator</a></li>
+
+                
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="a_tab">
+                    
+                    
+                    
+                 <div id="cont" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SEADS VISUALIZATION</h1>
+                    <p>HVAC's (Panel One) Energy Consumption in Kilowatt Per Hour</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <div>
+                      <input type="month" id="time">
+                      <input type="submit" onclick="myFunction()"/>
+                    </div>
+                    <div id="time-range">
+                        <h2><span id="slider-time"></span> to <span id="slider-time2"></span></h2>
+                        <div class="sliders_step1">
+                            <div id="slider-range"></div>
+                        </div>
+                    </div>
+                    <div id="chart"></div>
+                    <script src="chart.js"></script>
+                    <div><acontent></acontent></div>	                    
+
+                </div>
+                <div class = "col-md-3"></div>
+            </div>
+        </div>
+            
+            </div>                
+                
+                <div class="tab-pane" id="b_tab">
+                        
+
+                    
+            <div id="cont" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SEADS VISUALIZATION</h1>
+                    <p>Water Heater's (Panel Two) Energy Consumption in Kilowatt Per Hour</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <div>
+                      <input type="month" id="time1">
+                      <input type="submit" onclick="myFunction1()"/>
+                    </div>
+                    <div id="time-range">
+                        <h2><span id="1slider-time"></span> to <span id="1slider-time2"></span></h2>
+                        <div class="sliders_step1">
+                            <div id="1slider-range"></div>
+                        </div>
+                    </div>
+                    <div><bcontent></bcontent></div>	                    
+
+                </div>
+                <div class = "col-md-3"></div>
+            </div>
+        </div>
+                    
+                    
+                    
+                    
+            </div>
+                
+                <div class="tab-pane" id="c_tab">
+                
+            
+                    <div id="cont" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SEADS VISUALIZATION</h1>
+                    <p>Kitchen's (Panel Three) Energy Consumption in Kilowatt Per Hour</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <div>
+                      <input type="month" id="time2">
+                      <input type="submit" onclick="myFunction2()"/>
+                    </div>
+                    <div id="time-range">
+                        <h2><span id="2slider-time"></span> to <span id="2slider-time2"></span></h2>
+                        <div class="sliders_step1">
+                            <div id="2slider-range"></div>
+                        </div>
+                    </div>
+                    <div><ccontent></ccontent></div>	                    
+
+                </div>
+                <div class = "col-md-3"></div>
+            </div>
+        </div>
+                    
+                </div>
+                
+                
+                <div class="tab-pane" id="d_tab">
+                
+                
+                                    
+            
+                    <div id="cont" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SEADS VISUALIZATION</h1>
+                    <p>Energy Generated by Solar Panel (Panel S) in Kilowatt Per Hour</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <div>
+                      <input type="month" id="time3">
+                      <input type="submit" onclick="myFunction3()"/>
+                    </div>
+                    <div id="time-range">
+                        <h2><span id="3slider-time"></span> to <span id="3slider-time2"></span></h2>
+                        <div class="sliders_step1">
+                            <div id="3slider-range"></div>
+                        </div>
+                    </div>
+                    <div><dcontent></dcontent></div>	                    
+
+                </div>
+                <div class = "col-md-3"></div>
+            </div>
+        </div>
+                    
+                
+                </div>
+                
+                
+                <div class="tab-pane" id="e_tab">
+                
+                
+                                
+                    <div id="cont" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SEADS VISUALIZATION</h1>
+                    <p>Energy Produced by Generator (Panel G) in Kilowatt Per Hour</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <div>
+                      <input type="month" id="time4">
+                      <input type="submit" onclick="myFunction4()"/>
+                    </div>
+                    <div id="time-range">
+                        <h2><span id="4slider-time"></span> to <span id="4slider-time2"></span></h2>
+                        <div class="sliders_step1">
+                            <div id="4slider-range"></div>
+                        </div>
+                    </div>
+                    <div><econtent></econtent></div>	                    
+
+                </div>
+                <div class = "col-md-3"></div>
+            </div>
+        </div>
+                    
+                
+                
+                </div>
+                
+                
+            </div>
+            </div>
+
+        <script>
+            $.ajaxSetup ({
+                // Disable caching of AJAX responses
+                // Used when debugging
+                cache: false
+            });
+
+               $.getScript("a.js");
+            $(".atab").click(function() {
+                $.getScript("a.js");
+            })
+       
+            $(".btab").click(function() {
+                 $.getScript("b.js");
+            })
+        
+            $(".ctab").click(function() {
+                 $.getScript("c.js");
+            })
+        
+            $(".dtab").click(function() {
+                 $.getScript("d.js");
+            })
+        
+            $(".etab").click(function() {
+                 $.getScript("e.js");
+            })
+        </script>
+
+    </body>
+</html>
